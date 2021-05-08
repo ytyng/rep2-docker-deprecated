@@ -1,0 +1,21 @@
+version: '3'
+services:
+  rep2:
+    build: .
+    image: ytyng/rep2
+    container_name: rep2
+    ports:
+      - "80:80"
+    volumes:
+      - ../data:/app/data
+#    volumes:
+#      - ../..:/var/mangazenkan
+#      - ${HOME}/.ssh:/root/.ssh
+#    environment:
+#      MANGAZENKAN_INSTALLED_CONFIG_SCRIPT: ${MANGAZENKAN_INSTALLED_CONFIG_SCRIPT:-/var/mangazenkan/config/install_local.php}
+#      # ローカルDBを使うか／ホストのフラグ設定を起動時にコンテナ内へコピー
+#      USE_DOCKER_HOST_DATABASE: ${USE_DOCKER_HOST_DATABASE:-}
+#      # CDNを無効化するか／ホストのフラグ設定を起動時にコンテナ内へコピー
+#      DISABLE_CDN: ${DISABLE_CDN:-}
+#      # TORICO-CREDENTIALにアクセスするためのトークン／ホストのフラグ設定を起動時にコンテナ内へコピー
+#      TORICO_CREDENTIALS_TOKEN: ${TORICO_CREDENTIALS_TOKEN:-}
